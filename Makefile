@@ -3,7 +3,7 @@ MAIN_SRC_FILE=cmd/ras-rm-print-file/main.go
 
 .PHONY: test
 test:
-	go test  ./...
+	GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go test  ./...
 
 .PHONY: build
 build:
